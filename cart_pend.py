@@ -80,7 +80,7 @@ def dynamics(state,t):
 
     den1 = M + (m*sin(th)*sin(th))
     dydx[1] = (f + (m*g*sin(th)*cos(th)) + m*L*th_dot*th_dot*sin(th))/den1
-    den2 = L
+    den2 = L*(den1)
     dydx[3] = ((M+m)*g*sin(th) + f*cos(th) + m*L*th_dot*th_dot*sin(th)*cos(th))/den2
     dydx[3] = -dydx[3]
 
