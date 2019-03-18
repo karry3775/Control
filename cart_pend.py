@@ -1,3 +1,9 @@
+#####################################
+# Simple Pendulum
+# Author: Kartik Prakash
+# Date: Mar/15/2019
+#####################################
+
 from __future__ import division
 import matplotlib.pyplot as plt
 import scipy.integrate as integrate #used for integration
