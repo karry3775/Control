@@ -1,7 +1,7 @@
 # double_pendulum
 Simulation of a double pendulum
 # simple_pendulum
-Simulation of a single pendulum with feedback_linearization, constant_torque, undamped without control, damped without control
+Simulation of a single pendulum
 ![simple_pend](https://user-images.githubusercontent.com/43415631/54503312-afce4480-48fc-11e9-9e40-e2b63fb08fff.gif)
 # slider_demo
 Slider functionality to influence plotted data
