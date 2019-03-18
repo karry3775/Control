@@ -1,7 +1,7 @@
 #####################################
 # Simple Pendulum
 # Author: Kartik Prakash
-# Date: Mar/15/2019
+# Date: Mar/17/2019
 #####################################
 
 from __future__ import division
