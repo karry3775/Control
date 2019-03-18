@@ -1,5 +1,7 @@
 # double_pendulum
 Simulation of a double pendulum
+
+![double_pend](https://user-images.githubusercontent.com/43415631/54503519-98438b80-48fd-11e9-958a-6bad6328fabf.gif)
 # simple_pendulum
 Simulation of a simple pendulum
 
