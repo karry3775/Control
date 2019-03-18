@@ -88,7 +88,7 @@ def dynamics(state,t):
 
 
 #create a time array for the simulation
-dt = 0.05
+dt = 0.5
 t = np.arange(0.0,20.0,dt) #samples the interval provided at 0.05
 
 #integrate to get the solution
