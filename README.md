@@ -14,3 +14,4 @@ Dynamic simulation of a cart-pole system to be used for testing out various cont
 # pole_placement
 The gif has been sped up to show the effect
 
+![fast_pole_placement](https://user-images.githubusercontent.com/43415631/54903524-18dc2c00-4eaa-11e9-947f-f19f07894963.gif)
