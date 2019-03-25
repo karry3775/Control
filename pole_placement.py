@@ -131,8 +131,7 @@ def control_upright(state):
     if (r == 4):
         print("The system is controllable")
         #as the system is controllable we can arbitrarily place the eigen values/poles
-        p = [-1,-0.1,-0.2,-0.5]
-        p = [-2,-2,-2,-2]
+        p = [-1,-1,-0.1,-0.1]     
         K = control.acker(A,B,p)
         print("The K matrix is: ")
         print(K)
