@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+#####################################
+# CONTROL OF A CART_POLE
+# AUTHOR: KARTIK PRAKASH
+# DATE: Mar/24/2019
+#####################################
+
+"""
+IMPORTS
+"""
 from __future__ import division
 import matplotlib.pyplot as plt
 import scipy.integrate as integrate #used for integration
@@ -8,6 +17,9 @@ from numpy import sqrt, sin,cos
 import control
 from numpy.linalg import matrix_rank as rank
 
+"""
+SYSTEM SPECIFICATION
+"""
 
 #defining global cart parameters
 M = 50 #mass of the cart
@@ -32,6 +44,9 @@ thi_dot = np.radians(thi_dot_dash)
 
 istate = np.array([xi,xi_dot,thi,thi_dot])
 
+"""
+FUNCTION DEFINITION
+"""
 def setup():
     plt.xlim(-10,10)
     plt.ylim(-10,10)
@@ -100,17 +115,17 @@ def sim_cartpend(istate):
     # plt.plot(x_plot)
     # plt.plot(th_plot)
     #plotting after all the things are computed
-    for j in range(1):
+    for j in range(3):
         print("iteration: " + str(j))
         for i in range(len(x_plot)):
             plt.clf()
             setup()
             draw_cart(th_plot[i],x_plot[i])
             plt.draw()
-            plt.pause(0.00000001)
+            plt.pause(0.00001)
 
     plt.show()
-    
+
 
 def control_upright(state):
     global b, m , L ,M ,g
@@ -131,7 +146,8 @@ def control_upright(state):
     if (r == 4):
         print("The system is controllable")
         #as the system is controllable we can arbitrarily place the eigen values/poles
-        p = [-1,-1,-0.1,-0.1]     
+        # p = [-1,-0.1,-0.2,-0.5]
+        p = [-1,-1,-1,-1]
         K = control.acker(A,B,p)
         print("The K matrix is: ")
         print(K)
@@ -144,3 +160,18 @@ def control_upright(state):
         print("The system can't be controlled")
 
     return u
+
+"""
+USAGE
+
+from pole_placement import sim_cartpend #pole_placement should be replaced by the name you are saving this file
+import numpy as np
+th = 178
+thr = np.radians(th)
+th_dot = 2
+x_dot = 2
+state = np.array([0,x_dot,thr,th_dot])
+
+sim_cartpend(state)
+"""
+
